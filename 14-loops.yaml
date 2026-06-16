@@ -1,0 +1,13 @@
+- name: print the loop
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: looping through items
+    package:
+      name: " {{ item }}"
+      state: present
+    loop:
+    - nginx
+    - git
+    - mysql
