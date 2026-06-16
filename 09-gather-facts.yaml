@@ -1,6 +1,7 @@
 - name: gather facts
-  hosts: frontend
-  # connection: local
-  tasks: gathering facts
+  hosts: local
+  connection: local
+  tasks: 
+  - name: gathering facts
     debug:
       msg: " {{ ansible_facts }}"
