@@ -1,0 +1,7 @@
+- name: print the variable name
+  hosts: local
+  connection: local
+  tasks:
+  - name: debug the information
+    debug:
+      msg: "Hi, I am learning {{ COURSE }}, Trainer is {{ TRAINER }}, Duration is {{ DURATION }}"
