@@ -1,5 +1,5 @@
 - name: demo on inventory variables files
-  hosts: local
+  hosts: localhost
   connection: local
   vars_files:
   - course.yaml
