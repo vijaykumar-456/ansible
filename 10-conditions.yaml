@@ -1,0 +1,11 @@
+- name: print the conditons statement
+  hosts: local
+  connection: local
+  vars:
+    live_sessions: 6
+  tasks:
+  - name: debug the when command
+    debug:
+      msg: "yes, ansible takes more than 5 session to complete"
+    when: live_sessions > 5
+    
