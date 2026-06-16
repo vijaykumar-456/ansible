@@ -1,0 +1,13 @@
+- name: check for the OS
+  hosts: local
+  connection: local
+  tasks:
+  - name:  print for RedHat
+    debug:
+      msg: "This is RedHat, package manager is dnf"
+    when: ansible_facts.os_family == "RedHat"
+  
+  - name:  print for Debian
+    debug:
+      msg: "This is Debain, package manager is apt"
+    when: ansible_facts.os_family == "Debian"
