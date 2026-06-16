@@ -1,0 +1,12 @@
+- name: print loop information
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: loop here
+    debug:
+      msg: "Installing item {{ item }}"
+    loop:
+    - Vijay
+    - Vinay
+    - Shashi
