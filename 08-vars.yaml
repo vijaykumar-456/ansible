@@ -1,0 +1,7 @@
+- name: print from variable
+  hosts: local
+  connection: local
+  tasks:
+  - name: debug information
+    debug:
+      msg: "Hello {{ name }}" #command line argument, while running give the name and it will pass here
