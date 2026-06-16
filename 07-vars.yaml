@@ -1,6 +1,6 @@
 - name: print the variable name
-  hosts: local
-  connection: local
+  hosts: frontend
+  # connection: local
   tasks:
   - name: debug the information
     debug:
