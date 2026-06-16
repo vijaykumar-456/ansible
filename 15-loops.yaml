@@ -5,8 +5,8 @@
   tasks:
   - name: Installing packages
     package:
-      name: "Installing {{ name.item }}"
-      state: "State {{ state.item }}"
+      name: "Installing {{ item.name }}"
+      state: "State {{ item.state }}"
     loop:
     - { name: "nginx", state: "present" }
     - { name: "git", state: "absent" }
