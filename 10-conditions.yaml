@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    live_sessions: 6
+    live_sessions: 4
   tasks:
   - name: debug the when command
     debug:
