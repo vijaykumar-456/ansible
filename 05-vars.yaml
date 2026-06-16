@@ -1,7 +1,9 @@
-- name: demo on inventory variables
-  hosts: localhost
+- name: demo on inventory variables files
+  hosts: local
   connection: local
+  vars_files:
+  - course.yaml
   tasks:
-  - name: print information
+  - name: print varibale information
     debug:
       msg: Hi I am learning {{COURSE}}, Trainer is {{TRAINER}}, duration is {{DURATION}}"
