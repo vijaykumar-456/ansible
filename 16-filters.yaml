@@ -1,0 +1,9 @@
+- name: discuss on filter topics
+  hosts: local
+  connection: local
+  vars:
+    topics: Linux, Ansible, Shell, Git, AWS
+  tasks:
+  - name: filter topics
+    debug: 
+      msg: " Topics are: {{ topics | split(",") }}"
